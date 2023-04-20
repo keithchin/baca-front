@@ -25,3 +25,23 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.navbar {
+  display: none;
+
+
+  @media only screen and (min-width: 425px) {
+      display: flex;
+      justify-content: flex-end;
+  }
+
+  &__item {
+      font-size: 16px;
+      font-weight: 800;
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+      color: #FFF;
+  }
+}

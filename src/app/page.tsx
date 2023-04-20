@@ -1,23 +1,11 @@
-'use-client'
 
-import { ChakraProvider } from '@chakra-ui/react'
-import type { AppProps } from 'next/app';
-import { Link } from '@chakra-ui/next-js'
+import Counter from "./counter";
 
-export function Page() {
+export default function Home() {
   return (
-    <Link href='/about' color='blue.400' _hover={{ color: 'blue.500' }}>
-      About
-    </Link>
-  )
+    <div>
+      <Counter />
+      <h1 className="text-3xl font-bold underline">Hello Chakra UI</h1>
+    </div>
+  );
 }
-function MyApp({ Component, pageProps }: AppProps) {
-  return (
-    <ChakraProvider>
-        <Page />
-      <Component {...pageProps} />
-    </ChakraProvider>
-  )
-}
-
-export default MyApp;
