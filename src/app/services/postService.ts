@@ -17,6 +17,6 @@ export interface Post {
 }
 
 export async function getAllPosts(): Promise<Post[]> {
-  const response = await axios.get<Post[]>('https://your-api-url.com/posts');
+  const response = await axios.get<Post[]>('http://localhost:5000/api/posts');
   return response.data;
 }
