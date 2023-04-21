@@ -16,14 +16,18 @@
   }
 }
 
+html {
+  height: 100%;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #1E252B;
+}   
+
+.header {
+  border-bottom: 1px #262D34 solid;
+  background-color: #262D34;
 }
 
 .navbar {
@@ -43,5 +47,17 @@ body {
       margin-bottom: 1rem;
       margin-top: 1rem;
       color: #FFF;
+  }
+}
+
+.post {
+  margin: 0 1.5rem;
+
+  &-item {
+    border: 1px #262D34 solid;
+    border-radius: 40px;
+    color: #FFF;
+    padding: 1.5rem 3rem;
+     
   }
 }
