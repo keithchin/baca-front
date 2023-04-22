@@ -1,4 +1,4 @@
-'use-client'
+'use client'
 
 import React, { FC } from 'react';
 import type { NextPage } from 'next';
@@ -18,7 +18,7 @@ const NavBar: FC = () => {
         <>
             <ul className="navbar">
                 {navBarItems.map(item =>
-                    (<NavBarItem name={item.name} url={item.url} />)
+                    (<NavBarItem key={item.name} name={item.name} url={item.url} />)
                 )}
             </ul>
         </>

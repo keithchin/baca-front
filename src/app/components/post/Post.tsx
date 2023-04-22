@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import type { IPost, IPostItem } from "../../interfaces/post";
 import PostItem from './PostItem';
 
@@ -11,7 +11,7 @@ async function getData() {
   return res.json();
 }
 
-const Post = async () => {
+async function Post() {
     const posts : IPost[] = await getData();
 
   return (

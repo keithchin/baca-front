@@ -1,15 +1,19 @@
 export type IPost = {
-  authorId: string;
-  title: string;
-  content: string;
-  subforumId: string;
-  upvotedBy: Array<string>,
-  downvotedBy: Array<string>,
-  voteScore: Number,
-  createdAt: Date,
-  updatedAt: Date,
+    _id: string;
+    title: string;
+    content: string;
+    authorId: string;
+    subforumId: string;
+    upvotes: string[];
+    downvotes: string[];
+    created_at: Date;
+    updated_at: Date;
+    upvotedBy?: string[];
+    downvotedBy?: string[];
+    voteScore: number;
 };
 
 export type IPostItem = {
     post: IPost,
 }
+

@@ -21,7 +21,7 @@ const PostItem: FC<IPost> = (props) => {
                 </div>
                 <div className='post-item__desc'>
                     <span>Posted by {props.authorId}</span>
-                    <span>Posted on {(new Date(props.createdAt)).getDate()}</span>
+                    <span>Posted on {(new Date(props.created_at)).getDate()}</span>
                 </div>
             </div>
     );
