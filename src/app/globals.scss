@@ -18,11 +18,13 @@
 
 html {
   height: 100%;
+  font-family: Avenir, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
   background: #1E252B;
+
 }   
 
 .header {
@@ -70,6 +72,5 @@ body {
     display: flex;
     justify-content: center;
     align-self: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 }

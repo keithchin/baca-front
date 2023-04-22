@@ -2,7 +2,7 @@ const POST_URL = 'http://localhost:5000/api/posts'
 // adjust the limit to get more or less pokemon
 
 // * the getPokemon function is used to fetch the pokemon data from the pokeapi
-async function getPosts() {
+export default async function getPosts() {
   const res = await fetch(POST_URL);
   if (!res.ok) {
     throw new Error('Failed to fetch data');

@@ -4,6 +4,7 @@ import { FC, createContext, useContext, useState, ReactNode, useEffect } from "r
 import { IPost } from "../interfaces/post";
 import { NextApiResponse } from "next";
 import { NextResponse } from "next/server";
+import getPosts from "./getPost";
 
 
 const initialContext = { posts: [] }
@@ -27,15 +28,6 @@ async function getForums() {
   const res = await fetch('http://127.0.0.1:5000/api/subforums');
   if (!res.ok) {
     throw new Error('Failed to fetch forums');
-  }
-
-  return res.json();
-}
-
-async function getPosts() {
-  const res = await fetch('http://127.0.0.1:5000/api/posts');
-  if (!res.ok) {
-    throw new Error('Failed to fetch posts');
   }
 
   return res.json();
