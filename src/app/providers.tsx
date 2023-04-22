@@ -1,16 +1,16 @@
 'use client'
+import { ReactNode } from "react";
+import { AppStateProvider } from "./context/AppContext";
 
-import { CacheProvider } from '@chakra-ui/next-js'
-import { ChakraProvider } from '@chakra-ui/react'
 
 export default function Providers({ 
     children 
   }: { 
-  children: React.ReactNode 
+  children: ReactNode 
   }) {
   return (
-    <CacheProvider>
+    <AppStateProvider>
         {children}
-    </CacheProvider>
+    </AppStateProvider>
   )
 }

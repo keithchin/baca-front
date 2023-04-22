@@ -54,10 +54,22 @@ body {
   margin: 0 1.5rem;
 
   &-item {
+    display: flex;
+    justify-content: space-between;
     border: 1px #262D34 solid;
     border-radius: 40px;
     color: #FFF;
     padding: 1.5rem 3rem;
      
+  }
+}
+
+.bc {
+  &__load {
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 }

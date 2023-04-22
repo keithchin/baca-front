@@ -3,7 +3,10 @@ export type IPost = {
     title: string;
     content: string;
     authorId: string;
-    subforumId: string;
+    subforumId: {
+        title: string;
+        description: string;
+    };
     upvotes: string[];
     downvotes: string[];
     created_at: Date;

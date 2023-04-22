@@ -11,9 +11,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Providers>
         {/* @ts-expect-error Server Component */}
         <Header />
           {children}
+        </Providers>
       </body>
     </html>
   );

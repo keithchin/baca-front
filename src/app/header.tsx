@@ -1,7 +1,7 @@
-'use-client'
+'use client'
 
 import React, { FC, useEffect, useRef } from 'react';
-import NavBar from './components/nav/NavBar'
+import NavBar from './components/nav/NavBar';
 import { ISubforum } from './interfaces/subforum';
 
 async function getData() {
@@ -14,7 +14,9 @@ async function getData() {
   }
 
 async function Header() {
+
     const subforums : ISubforum[] = await getData();
+
 
     return (
         <header id="header" className="header">
@@ -24,9 +26,12 @@ async function Header() {
                     {/* <img src="/logo_keith.png" alt="Keith Chin Logo" className="icon__header"/> */}
                 </a>
                 <select>
+                    <option>All</option>
                     {subforums.map(sub => 
                         <option key="sub.id">
+                            <a href="/b/news">
                             {sub.title}
+                            </a>
                         </option>
                     )}
                     
