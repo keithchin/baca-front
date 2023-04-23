@@ -1,5 +1,4 @@
 
-import Providers from "./providers";
 import Header from "./header";
 import './globals.scss';
 
@@ -14,6 +13,7 @@ export default function RootLayout({
         {/* @ts-expect-error Server Component */}
           <Header />
           {children}
+          
       </body>
     </html>
   );

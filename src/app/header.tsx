@@ -29,9 +29,7 @@ async function Header() {
                     <option>All</option>
                     {subforums.map(sub => 
                         <option key="sub.id">
-                            <a href="/b/news">
                             {sub.title}
-                            </a>
                         </option>
                     )}
                     
