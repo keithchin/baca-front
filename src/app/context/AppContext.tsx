@@ -7,7 +7,11 @@ import { NextResponse } from "next/server";
 import getPosts from "./getPost";
 
 
-const initialContext = { posts: [] }
+const initialContext = { 
+  posts: [],
+  activeForum: "",
+  setActiveForum: () => {},
+}
 interface AppContextType    { 
     posts: IPost[],
     activeForum: String,    
@@ -18,11 +22,7 @@ interface AppStateProviderType {
     children: ReactNode;
 }
 
-const AppStateContext = createContext<AppContextType>({
-    posts: [],
-    activeForum: "",
-    setActiveForum: () => {},
-});
+const AppStateContext = createContext<AppContextType>(initialContext);
 
 async function getForums() {
   const res = await fetch('http://127.0.0.1:5000/api/subforums');
@@ -32,6 +32,7 @@ async function getForums() {
 
   return res.json();
 }
+export const useAppState = () => useContext(AppStateContext);
 
 export const AppStateProvider: FC<AppStateProviderType> = ({ children }) => {
   const [activeForum, setActiveForum] = useState("");
@@ -65,6 +66,4 @@ export const AppStateProvider: FC<AppStateProviderType> = ({ children }) => {
     </AppStateContext.Provider>
   );
 };
-
-export const useAppState = () => useContext(AppStateContext);
 

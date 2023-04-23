@@ -1,5 +1,3 @@
-'use client';
-
 import Post from "./components/post/Post";
 import { Suspense } from "react";
 

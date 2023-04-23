@@ -1,7 +1,10 @@
+
 import React, { FC } from 'react';
 import Link from 'next/link';
 import type { IPost } from '@/app/interfaces/post';
 import {  ScriptProps } from 'next/script';
+import { FaArrowUp } from 'react-icons/fa';
+import { FaArrowDown } from 'react-icons/fa';
 
 
 
@@ -17,13 +20,22 @@ function PostItem(props: IPost){
     // }
     return (
             <div className='post-item'>
-                <div>
-                    <div className='post-item__title'>
-                        {props.title}
+                <div className="flex items-center">
+                    <div className="mr-5">
+                        <span className="">{props.voteScore}</span>
                     </div>
-                    <div className='post-item__desc'>
-                        <span>Posted by {props.authorId}</span>
-                        <span>Posted on {(new Date(props.created_at)).getDate()}</span>
+                    <div className="mr-5">
+                        <FaArrowUp />
+                        <FaArrowDown />
+                    </div>
+                    <div>
+                        <div className='post-item__title'>
+                            {props.title}
+                        </div>
+                        <div className='post-item__desc'>
+                            <span>Posted by {props.authorId}</span>
+                            <span>Posted on {(new Date(props.created_at)).getDate()}</span>
+                        </div>
                     </div>
                 </div>
                 <div>
