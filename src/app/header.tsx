@@ -1,4 +1,3 @@
-'use client'
 
 import React, { FC, useEffect, useRef } from 'react';
 import NavBar from './components/nav/NavBar';

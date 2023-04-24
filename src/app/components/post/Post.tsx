@@ -2,7 +2,7 @@ import React, { FC  } from 'react';
 import type { IPost, IPostItem } from "../../interfaces/post";
 import PostItem from './PostItem';
 import PostClient from './PostClient';
-import { useAppState } from '@/app/context/AppContext';
+import PostVote from './PostVote';
 import { useRouter } from 'next/navigation';
 
 
@@ -14,17 +14,20 @@ interface PostProps {
 async function Post({promise, onVote}: PostProps) {
   const posts : IPost[] = await promise;
   return (
-    <>
-      <div className="post">
-        {posts.map(post =>
+    <div className='post'>
+      {posts.map(post =>
+        <div className="post-item">
+          <PostVote 
+            key={post.authorId}
+            {...post}
+          />
           <PostItem
             key={post.authorId}
             {...post}
-            onVote={onVote}
           />
-        )}
-      </div>
-    </>
+        </div>
+      )}
+    </div>
   );
 }
 
