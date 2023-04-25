@@ -1,5 +1,5 @@
 import React, { FC  } from 'react';
-import type { IPost, IPostItem } from "../../interfaces/post";
+import type { IPost } from '../interfaces/post';
 import PostItem from './PostItem';
 import PostClient from './PostClient';
 import PostVote from './PostVote';
@@ -18,11 +18,11 @@ async function Post({promise, onVote}: PostProps) {
       {posts.map(post =>
         <div className="post-item">
           <PostVote 
-            key={post.authorId}
+            key={post.authorId._id}
             {...post}
           />
           <PostItem
-            key={post.authorId}
+            key={post.authorId._id}
             {...post}
           />
         </div>

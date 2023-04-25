@@ -3,18 +3,18 @@ import React, { FC, useEffect, useRef } from 'react';
 import NavBar from './components/nav/NavBar';
 import { ISubforum } from './interfaces/subforum';
 
-async function getData() {
-    const res = await fetch('http://localhost:5000/api/subforums');
-    if (!res.ok) {
-      throw new Error('Failed to fetch data');
-    }
+// async function getData() {
+//     const res = await fetch('http://localhost:5000/api/subforums');
+//     if (!res.ok) {
+//       throw new Error('Failed to fetch data');
+//     }
   
-    return res.json();
-  }
+//     return res.json();
+//   }
 
 async function Header() {
 
-    const subforums : ISubforum[] = await getData();
+    // const subforums : ISubforum[] = await getData();
 
 
     return (
@@ -24,7 +24,7 @@ async function Header() {
                     <p>Baca</p>
                     {/* <img src="/logo_keith.png" alt="Keith Chin Logo" className="icon__header"/> */}
                 </a>
-                <select>
+                {/* <select>
                     <option>All</option>
                     {subforums.map(sub => 
                         <option key="sub.id">
@@ -32,7 +32,7 @@ async function Header() {
                         </option>
                     )}
                     
-                </select>
+                </select> */}
                 <NavBar />
             </div>
         </header>

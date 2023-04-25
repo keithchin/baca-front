@@ -2,7 +2,10 @@ export type IPost = {
     _id: string;
     title: string;
     content: string;
-    authorId: string;
+    authorId: {
+        _id: string;
+        username: string;
+    };
     subforumId: {
         title: string;
         description: string;
