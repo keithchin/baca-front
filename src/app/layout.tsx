@@ -1,8 +1,8 @@
 import Header from "./header";
-import Grid from "./components/Grid";
+import Grid from "./components/body/Grid";
 import './globals.scss';
-import LeftSidebar from "./components/LeftSidebar";
-import RightSidebar from "./components/RightSidebar";
+import LeftSidebar from "./components/body/LeftSidebar";
+import RightSidebar from "./components/body/RightSidebar";
 
 export default function RootLayout({
   children,

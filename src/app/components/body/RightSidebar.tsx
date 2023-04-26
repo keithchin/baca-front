@@ -1,4 +1,4 @@
-import { ISubforum } from "../interfaces/subforum";
+import { ISubforum } from "../../interfaces/subforum";
 
 interface SidebarProps {
     promise: Promise<ISubforum[]>;

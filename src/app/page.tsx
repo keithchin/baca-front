@@ -1,10 +1,11 @@
-
-import Post from "./post/Post";
-import LeftSidebar from "./components/LeftSidebar";
-import RightSidebar from "./components/RightSidebar";
+import Body from './components/body/Body';
+import Post from "./components/body/post/Post";
+import LeftSidebar from "./components/body/LeftSidebar";
+import RightSidebar from "./components/body/RightSidebar";
 import { IPost } from "./interfaces/post";
 import { Suspense } from "react";
 import { ISubforum } from "./interfaces/subforum";
+import PostCreate from './components/body/post/PostCreate';
 
 async function getPosts() {
   const res = await fetch('http://localhost:5000/api/posts', {
@@ -28,8 +29,12 @@ export default async function Home() {
 
   return (
     <Suspense fallback={<p className="bc__load">Loading feed...</p>}>
-        {/* @ts-expect-error Async Server Component */}
-        <Post promise={posts} />
+        <Body>
+          {/* @ts-expect-error Async Server Component */}
+          <PostCreate />
+          {/* @ts-expect-error Async Server Component */}
+          <Post promise={posts} />
+        </Body>
     </Suspense>
   );
 }

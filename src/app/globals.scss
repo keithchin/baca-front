@@ -24,7 +24,8 @@ html {
 body {
   color: rgb(var(--foreground-rgb));
   background: #1E252B;
-
+  height: 100%;
+  overflow-y: hidden;
 }   
 
 .header {
@@ -65,9 +66,6 @@ body {
 }
 
 .post {
-  margin: 0 1rem;
-  width: 100%;
-
   &-item {
     display: flex;
     border: 1px #262D34 solid;
@@ -75,13 +73,20 @@ body {
     color: #FFF;
     padding: 1.5rem 3rem;
     background-color: #262D34;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin: 1rem;
     align-items: center;
   }
 }
 
+.post-create {
+  border-bottom: 1px #262D34 solid;
+  height: 140px;
+}
+
 .bc {
+  &__body {
+    width: 100%;
+  }
   &__load {
     color: #FFF;
     display: flex;
@@ -92,6 +97,7 @@ body {
     display: flex;
     padding-left: 160px;
     padding-right: 160px;
+    height: 100%;
   }
   &__left-sidebar, 
   &__right-sidebar {
@@ -116,5 +122,9 @@ body {
           background-color: #FFF;
         }
     }
+  }
+
+  &__right-sidebar {
+    border-left: 1px #262D34 solid;
   }
 }
