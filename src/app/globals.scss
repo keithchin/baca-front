@@ -18,7 +18,7 @@
 
 html {
   height: 100%;
-  font-family: Avenir, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: 'Titillium Web', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
 }
 
 body {
@@ -35,7 +35,7 @@ body {
   height: 80px;
 
   &__profile {
-    border: 2px #FFF solid;
+    border: 2px #F7FFFF solid;
     border-radius: 40px;
     height: 30px;
     width: 30px;
@@ -61,7 +61,7 @@ body {
       margin-right: 1.5rem;
       margin-bottom: 1rem;
       margin-top: 1rem;
-      color: #FFF;
+      color: #F7FFFF;
   }
 }
 
@@ -70,10 +70,10 @@ body {
     display: flex;
     border: 1px #262D34 solid;
     border-radius: 4px;
-    color: #FFF;
+    color: #F7FFFF;
     padding: 1.5rem 3rem;
     background-color: #262D34;
-    margin: 1rem;
+    margin: 1rem 1.7rem;
     align-items: center;
   }
 }
@@ -81,6 +81,32 @@ body {
 .post-create {
   border-bottom: 1px #262D34 solid;
   height: 140px;
+  display: flex;
+
+  &__text {
+    width: 100%;
+    height: 100%;
+    background: none;
+    outline: none;
+    color: #F7FFFF;
+    resize: auto;
+    overflow: hidden;
+  }
+
+  &__avatar {
+    align-self: center;
+    justify-content: center;
+    display: flex;
+    width: 135px;
+    
+    &__icon {
+      border-radius: 80px;
+      border: 1px #F7FFFF solid;
+      color: #F7FFFF;
+      width: 60px;
+      height: 60px;
+    }
+  }
 }
 
 .bc {
@@ -88,7 +114,7 @@ body {
     width: 100%;
   }
   &__load {
-    color: #FFF;
+    color: #F7FFFF;
     display: flex;
     justify-content: center;
     align-self: center;
@@ -112,19 +138,31 @@ body {
 
       &__item {
         font-size: 24px;
-        color: #FFF;
+        color: #F7FFFF;
         padding: 10px;
         margin: 5px 0;
 
         &:hover {
           color: #262D34;
           border-radius: 20px;
-          background-color: #FFF;
+          background-color: #F7FFFF;
         }
     }
   }
 
   &__right-sidebar {
     border-left: 1px #262D34 solid;
+  }
+}
+
+.bc-btn {
+  &__post {
+    width: 80px;
+    color: #F7FFFF;
+    border-radius: 20px;
+    background-color: #8D7779;
+    padding: 0.6rem;
+    text-align: center;
+    font-weight: 700;
   }
 }

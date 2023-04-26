@@ -1,9 +1,15 @@
 import Header from "./header";
+import Head from "next/head";
 import Grid from "./components/body/Grid";
 import './globals.scss';
 import LeftSidebar from "./components/body/LeftSidebar";
 import RightSidebar from "./components/body/RightSidebar";
+import { Inter  } from '@next/font/google'
 
+const titi = Inter ({
+  weight : ['400'],
+  subsets: ['latin']
+})
 export default function RootLayout({
   children,
 }: {
@@ -11,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={titi.className}>
         {/* @ts-expect-error Server Component */}
           <Header />
           <Grid>
