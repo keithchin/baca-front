@@ -30,6 +30,19 @@ body {
 .header {
   border-bottom: 1px #262D34 solid;
   background-color: #262D34;
+  padding-right: 160px;
+  padding-left: 160px;
+  height: 80px;
+
+  &__profile {
+    border: 2px #FFF solid;
+    border-radius: 40px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .navbar {
@@ -78,15 +91,10 @@ body {
   }
   &__grid {
     display: flex;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 160px;
+    padding-right: 160px;
   }
-  &__left-sidebar {
-    background-color: #262D34;
-    border-radius: 4px;
-    margin-top: 1rem;
-    min-width: 200px;
-  }
+  &__left-sidebar, 
   &__right-sidebar {
     background-color: #262D34;
     border-radius: 4px;

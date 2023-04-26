@@ -1,6 +1,6 @@
 
 import React, { FC, useEffect, useRef } from 'react';
-import NavBar from './components/nav/NavBar';
+import ProfileDropdown from '../app/components/header/ProfileDropdown'
 import { ISubforum } from './interfaces/subforum';
 
 // async function getData() {
@@ -18,14 +18,13 @@ async function Header() {
 
 
     return (
-        <header id="header" className="header">
-            <div className="flex justify-between">
-                <a href="/" className="font-bold text-white mt-4 ml-6 mr-6">
+        <header id="header" className="header flex justify-between items-center">
+                <a href="/" className="font-bold text-white">
                     <p>Baca</p>
                     {/* <img src="/logo_keith.png" alt="Keith Chin Logo" className="icon__header"/> */}
                 </a>
                 {/* <select>
-                    <option>All</option>
+                    <option>All</option> 
                     {subforums.map(sub => 
                         <option key="sub.id">
                             {sub.title}
@@ -33,8 +32,7 @@ async function Header() {
                     )}
                     
                 </select> */}
-                <NavBar />
-            </div>
+                <ProfileDropdown />
         </header>
     )
 }
