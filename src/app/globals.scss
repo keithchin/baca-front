@@ -167,11 +167,25 @@ body {
     font-weight: 700;
     margin-right: 1.75rem;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
 
-    &:hover {
+
+    &:hover:not(:disabled) {
       color: #8D7779;
       background-color: #F7FFFF;
       animation-delay: 10ms;
+      transform: scale(1.1);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+    }
+
+    &:disabled:hover {
+      color: #F7FFFF;
+      background-color: #8D7779;
+      animation-delay: 10ms;
+      cursor: default;
     }
   }
 }
