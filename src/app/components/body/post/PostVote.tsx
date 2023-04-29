@@ -35,7 +35,6 @@ async function postVoteScore(
       postId: _id,
     }),
   });
-  console.log(res);
   if (!res.ok) {
     throw new Error(`Failed to ${type} post!`);
   }
@@ -43,7 +42,6 @@ async function postVoteScore(
     throw new Error(`There was an error with status code ${res.status}`);
   }
   const json = await res.json();
-  console.log(json);
   return json;
 }
 

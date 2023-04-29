@@ -9,7 +9,6 @@ function PostCreate() {
     const [text, setText] = useState('');
 
     function isEmpty() {
-        console.log(text.trim().length);
         return text.trim().length === 0;
     }
     
