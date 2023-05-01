@@ -18,11 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={titi.className}>
-        {/* @ts-expect-error Server Component */}
-          <Header />
           <Grid>
             {/* @ts-expect-error Server Component */}
-            <LeftSidebar/>
+            <Header />
             {children}
             {/* @ts-expect-error Server Component */}
             <RightSidebar/>

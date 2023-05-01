@@ -1,5 +1,7 @@
 
 import React, { FC, MouseEventHandler } from 'react';
+import { FaNewspaper } from 'react-icons/fa';
+import { CgNotifications } from 'react-icons/cg'
 
 
 interface PostItemProps {
@@ -17,6 +19,7 @@ interface PostItemProps {
 
 const PostItem: FC<PostItemProps> = ({voteScore, title, _id, authorId, created_at, subforumId }) => {
     return (
+        <div className="post-item">
             <div className='flex justify-between'>
                 <div className="flex items-center">
                     <div>
@@ -31,10 +34,11 @@ const PostItem: FC<PostItemProps> = ({voteScore, title, _id, authorId, created_a
                 </div>
                 <div>
                     <div className='post-item__tag'>
-                        {subforumId.title}
+                        <CgNotifications size={'2rem'}  />
                     </div>
                 </div>
             </div>
+        </div>
     );
 }
 

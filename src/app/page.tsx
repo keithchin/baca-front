@@ -30,6 +30,11 @@ export default async function Home() {
   return (
     <Suspense fallback={<p className="bc__load">Loading feed...</p>}>
         <Body>
+          <div className="bc__heading1__wrapper">
+            <h1 className="bc__heading1">Home</h1>            
+          </div>
+          <div>
+          </div>
           <PostCreate />
           {/* @ts-expect-error Async Server Component */}
           <Post promise={posts} />

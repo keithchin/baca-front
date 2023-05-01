@@ -16,12 +16,10 @@ async function Post({promise, onVote}: PostProps) {
   return (
     <div className='post'>
       {posts.map(post =>
-        <div className="post-item">
           <PostItem
             key={post.authorId._id}
             {...post}
           />
-        </div>
       )}
     </div>
   );
