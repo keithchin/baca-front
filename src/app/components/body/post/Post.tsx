@@ -17,10 +17,6 @@ async function Post({promise, onVote}: PostProps) {
     <div className='post'>
       {posts.map(post =>
         <div className="post-item">
-          <PostVote 
-            key={post.authorId._id}
-            {...post}
-          />
           <PostItem
             key={post.authorId._id}
             {...post}
