@@ -46,7 +46,7 @@ async function Header() {
                         Notifications
                     </span>  
                 </div>
-                <div className="bc__left-sidebar__item">
+                <div className="bc__left-sidebar__item bc__left-sidebar__item--profile">
                     <ProfileDropdown />
                 </div>
         </header>

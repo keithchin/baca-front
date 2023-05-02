@@ -64,18 +64,7 @@ body {
   }
 }
 
-.post {
-  &-item {
-    display: flex;
-    border: 1px #262D34 solid;
-    border-radius: 4px;
-    color: #F7FFFF;
-    padding: 1.5rem 3rem;
-    background-color: #262D34;
-    margin: 1rem 1.7rem;
-    align-items: center;
-  }
-}
+
 
 .post-create {
   border-bottom: 1px #262D34 solid;
@@ -111,6 +100,13 @@ body {
 
 .post-item {
   position: relative;
+  display: flex;
+  border: 1px #262D34 solid;
+  border-radius: 4px;
+  color: #F7FFFF;
+  padding: 1.5rem 3rem;
+  align-items: center;
+
   &__desc {
     font-size: 11px;
     margin-top: 1rem;
@@ -153,7 +149,7 @@ body {
   &__left-sidebar, 
   &__right-sidebar {
     border-radius: 4px;
-    min-width: 250px;
+    min-width: 350px;
     padding: 10px;
   }
 
@@ -174,6 +170,12 @@ body {
         display: flex;
         text-align: center;
         align-items: center;
+
+        &--profile {
+          position: fixed;
+          bottom: 0;
+          margin-bottom: 1rem;
+        }
   
         &:hover {
           color: #262D34;
