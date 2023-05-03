@@ -13,18 +13,19 @@ interface PostItemProps {
     authorId: {
         username: String
     },
+    content: String,
     title: String,
     voteScore: Number
 }
 
-const PostItem: FC<PostItemProps> = ({voteScore, title, _id, authorId, created_at, subforumId }) => {
+const PostItem: FC<PostItemProps> = ({voteScore, title, content, _id, authorId, created_at, subforumId }) => {
     return (
         <div className="post-item">
             <div className='flex justify-between'>
                 <div className="flex items-center">
                     <div>
                         <div className='post-item__title'>
-                            {title}
+                            {content}
                         </div>
                         <div className='post-item__desc'>
                             <span>Posted by {authorId.username}</span>
