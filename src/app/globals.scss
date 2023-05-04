@@ -25,7 +25,7 @@ body {
   color: rgb(var(--foreground-rgb));
   background: #1E252B;
   height: 100%;
-  overflow-y: hidden;
+  // overflow-y: hidden;
 }   
 
 .header {
@@ -67,6 +67,12 @@ body {
 .post {
   overflow-y: auto;
   height: calc(100% - 100px);
+  -ms-overflow-style: none; 
+  scrollbar-width: none;  
+}
+
+.post::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
 }
 
 
@@ -135,7 +141,6 @@ body {
 .bc {
   &__body {
     width: 100%;
-    overflow-y:auto;
     -ms-overflow-style: none; 
     scrollbar-width: none;  
 
@@ -147,7 +152,7 @@ body {
   }
 
   &__fixed-top {
-    position: fixed;
+    position: sticky;
     backface-visibility: hidden;
     backdrop-filter: blur(12px);
     z-index: 3;
